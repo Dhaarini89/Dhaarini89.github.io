@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+  <data>
+
+      <variable
+          name="myname"
+          type="com.android.example.aboutme.model.MyName" />
+  </data>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingEnd="@dimen/medium_padding"
+    android:paddingStart="@dimen/medium_padding"
+    android:paddingTop="@dimen/medium_padding"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@={myname.name}"
+        tools:text="User Name"
+        android:id="@+id/name_txt"
+        android:paddingEnd="@dimen/medium_padding"
+        android:paddingStart="@dimen/medium_padding"
+        android:paddingTop="@dimen/medium_padding"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:inputType="textPersonName"
+        android:maxLength="30"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:paddingEnd="@dimen/medium_padding"
+        android:paddingStart="@dimen/medium_padding"
+        android:paddingTop="@dimen/medium_padding"
+        android:layout_height="wrap_content"
+        android:hint="What is your nickname?"
+        android:id="@+id/edit_name"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_done"
+        android:paddingEnd="@dimen/medium_padding"
+        android:paddingStart="@dimen/medium_padding"
+        android:paddingTop="@dimen/medium_padding"
+        android:textAlignment="center"
+        android:text="@string/done_action"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_avatar"
+        android:id="@+id/image"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/inner_layout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nick_txt"
+            style="@style/TitleStyle"
+            android:lineSpacingMultiplier="1.2"
+            android:text="@={myname.greetings}"
+            tools:text="@string/greeting"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/para_txt"
+            style="@style/TitleStyle"
+            android:lineSpacingMultiplier="1.2"
+            android:text="@string/bio_content" />
+
+     </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+</layout>
