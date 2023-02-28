@@ -12,6 +12,7 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+dada
 sample
 rootProject.name = "AboutMe"
 Bqqqqqqq
