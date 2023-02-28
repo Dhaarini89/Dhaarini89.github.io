@@ -12,6 +12,7 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+sample
 rootProject.name = "AboutMe"
 Bqqqqqqq
 include ':app'
